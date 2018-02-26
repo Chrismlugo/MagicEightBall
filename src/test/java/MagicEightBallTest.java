@@ -34,5 +34,14 @@ public class MagicEightBallTest {
     }
 
     @Test
+    public void canGetAnswerAtIndex(){
+        assertEquals("Chance would be a fine thing", magicEightBall.getAnswerAtIndex(0));
+    }
 
+
+    @Test
+    public void canRemoveAnAnswer(){
+        magicEightBall.removeAnswer("yes");
+        assertEquals(2, magicEightBall.getWordCount());
+    }
 }

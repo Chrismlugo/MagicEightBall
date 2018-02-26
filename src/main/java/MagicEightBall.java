@@ -17,6 +17,10 @@ public class MagicEightBall {
         return this.answers.size();
     }
 
+    public String getAnswerAtIndex(int index) {
+        return answers.get(index);
+    }
+
 
 
     public String getRandomAnswer(){
@@ -27,4 +31,10 @@ public class MagicEightBall {
     public ArrayList<String> getAnswers(){
         return new ArrayList<>(this.answers);
     }
+
+    public void removeAnswer(String answer){
+         answers.remove(answer);
+
+    }
+
 }
