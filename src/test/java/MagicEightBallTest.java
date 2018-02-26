@@ -3,7 +3,10 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 
-public class MagicEightBalltest {
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
+public class MagicEightBallTest {
 
     private MagicEightBall magicEightBall;
 
@@ -17,7 +20,19 @@ public class MagicEightBalltest {
     }
 
     @Test
-    public void canAddAnswers(){
-
+    public void canAddAnswer(){
+        magicEightBall.add("Not sure...");
+        assertEquals(4 , magicEightBall.getWordCount());
     }
+
+
+    @Test
+    public void canGetRandomAnswer(){
+         ArrayList results = magicEightBall.getAnswers();
+        String randomAnswer = magicEightBall.getRandomAnswer();
+        assertTrue(results.contains(randomAnswer));
+    }
+
+    @Test
+
 }
